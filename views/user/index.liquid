@@ -1,0 +1,29 @@
+<h1>Привет, {{ name }}</h1>
+<p>Ваша роль: {{ role }}</p>
+
+<h1>Список избранных фильмов:</h1>
+<table>
+    <tbody>
+        {% for film in films %}
+            <tr>
+                <td>Название:</td>
+                <td>{{ film }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1>Удаление фильма:</h1>
+<form  style= "margin-top: 10px" action="uDeleteF" method="POST">
+    <input type='text' name='uDeleteFilm' placeholder="Название фильма" required />
+    <button type="submit">Удалить фильм</button>
+</form>
+
+<h1>Поиск новых фильмов</h1>
+<form style= "margin-top: 10px" action="toCatalog" method="GET">
+    <button type="submit">Каталог</button>
+</form>
+
+<form style= "margin-top: 10px" action="/login" method="GET">
+    <button type="submit">выйти</button>
+</form>

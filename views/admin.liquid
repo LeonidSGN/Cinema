@@ -1,0 +1,19 @@
+<h1>Привет, {{ name }}</h1>
+<p>Ваша роль: {{ role }}</p>
+
+<h1>Список пользователей:</h1>
+<table>
+    <tbody>
+        {% for user in results %}
+            <tr>
+                <td>Имя:</td>
+                <td>{{ user.username }}</td>
+                <td>Роль:</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<form action="/login" method="GET">
+    <button type="submit">выйти</button>
+</form>

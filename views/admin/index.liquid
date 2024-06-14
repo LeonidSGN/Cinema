@@ -1,0 +1,37 @@
+<h1>Привет, {{ name }}</h1>
+<p>Ваша роль: {{ role }}</p>
+
+<h1>Список фильмов:</h1>
+<table>
+    <tbody>
+        {% for film in films %}
+            <tr>
+                <td>Название:</td>
+                <td>{{ film }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h1>Удаление фильма:</h1>
+<form style= "margin-top: 10px" action="aDeleteF" method="post">
+    <input type='text' id = "deleteFilm" name="deleteFilm" placeholder="Название фильма" required />
+    <button type="submit">Удалить фильм</button>
+</form>
+
+<h1>Добавление фильма:</h1>
+<form style= "margin-top: 10px" action="aAddF" method="POST">
+    <input type='text' name='addFilm' placeholder="Название фильма" required />
+    <button type="submit">Добавить фильм</button>
+</form>
+
+<h1>Изменение фильма:</h1>
+<form style= "margin-top: 10px" action="aUpdateF" method="POST">
+    <input type='text' name='updateFilmCurr' placeholder="Старое название фильма" required />
+    <input style= "margin-top: 10px" type='text' name='updateFilmNew' placeholder="Новое название фильма" required />
+    <button type="submit">Обновить информацию о фильме</button>
+</form>
+
+<form action="/login" method="GET">
+    <button type="submit">выйти</button>
+</form>

@@ -1,0 +1,21 @@
+<h1>Привет, {{ name }}</h1>
+<h3>Здесь ты можешь найти интересующий тебя фильм</h3>
+
+<h3>Каталог фильмов:</h3>
+<table>
+    <tbody>
+        {% for film in films %}
+            <tr>
+                <td>Название:</td>
+                <td>{{ film }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Добавить фильм:</h3>
+<form style= "margin-top: 10px" action="uAddF" method="POST">
+    <input type='text' name='uAddFilm' placeholder="Название фильма" required />
+    <button type="submit">Добавить фильм</button>
+</form>
+
