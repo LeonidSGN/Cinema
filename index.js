@@ -19,7 +19,7 @@ app.set('views', './views');
 // Устанавливаем Liquid как движок для шаблонов
 app.set('view engine', 'liquid');
 
-// Используйте встроенный парсер для обработки данных формы
+
 app.use(express.urlencoded({ extended: true }));
 
 // Используем cookie-parser middleware для работы с куками
